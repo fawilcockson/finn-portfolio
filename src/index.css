@@ -6,15 +6,17 @@ body {
 }
 
 .page {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .nav {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  width: calc(100% - 40px);
+  max-width: 600px;
+  margin: 20px auto;
 }
 
 .nav a {
@@ -30,9 +32,36 @@ body {
 }
 
 .box {
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  max-width: 600px;
+  flex: 1;
+  margin: 0 auto 20px;
   background: white;
   border: 3px solid #083D77;
   padding: 20px;
+}
+
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+  padding: 12px 20px;
+  background: var(--blue);
+  color: var(--cream);
+  text-align: center;
+}
+
+.footer p {
+  margin: 6px 0;
+}
+
+.footer a {
+  color: inherit;
+}
+
+.footer a:hover {
+  color: var(--yellow);
 }
 
 .row {
@@ -47,7 +76,6 @@ body {
 }
 
 .row.top {
-  background: #fff176;
   font-weight: bold;
 }
 

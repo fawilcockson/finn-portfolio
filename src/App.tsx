@@ -1,5 +1,9 @@
 import { Link, Route, Routes } from "react-router-dom";
 import Leaderboard from "./pages/Leaderboard.tsx";
+import Archive from "./pages/Archive";
+import Blog from "./components/Blog";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
 import './App.css'
 
 function App() {
@@ -8,17 +12,18 @@ function App() {
       <div className="nav">
         <Link to="/">Home</Link>
         <Link to="/leaderboard">Leaderboard</Link>
-        <a href={import.meta.env.VITE_FORM_URL} target="_blank" rel="noreferrer">
-          Take the quiz
-        </a>
+        <Link to="/archive">Quiz Archive</Link>
       </div>
 
       <div className="box">
         <Routes>
-          <Route path="/" element={<h1>Finn's Portfolio</h1>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/archive" element={<Archive />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 
