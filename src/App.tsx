@@ -4,6 +4,7 @@ import Archive from "./pages/Archive";
 import Blog from "./components/Blog";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import cvUrl from "./assets/CV.pdf";
 import './App.css'
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/leaderboard">Leaderboard</Link>
         <Link to="/archive">Quiz Archive</Link>
+        <a href={cvUrl} target="_blank" rel="noopener noreferrer">
+          CV
+        </a>
       </div>
 
       <div className="box">
